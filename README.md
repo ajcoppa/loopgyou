@@ -2,8 +2,8 @@
 
 This is a Grey You softcore script, using the [grimoire](https://github.com/Kasekopf/grimoire) framework.
 
-This is a fork of https://github.com/Kasekopf/loop-casual/tree/gyou
-Only minor changes by Irrat are made to this script to keep it up to date
+This is a fork of https://github.com/Kasekopf/loop-casual/tree/gyou with some
+changes by Irrat.
 
 ## Warning: After the nerf on 1/30, this script will no longer work for most people. Use at your own risk!
 
