@@ -93,7 +93,7 @@ const Cranny: Task[] = [
   {
     name: "Cranny",
     after: ["Start"],
-    ready: () => myBasestat($stat`Muscle`) >= 62,
+    ready: () => myBasestat($stat`Muscle`) >= 62 && myTurncount() > 200,
     completed: () => get("cyrptCrannyEvilness") <= 13,
     prepare: () => {
       tuneCape();
@@ -111,11 +111,11 @@ const Cranny: Task[] = [
         equip: tryCape(
           $item`antique machete`,
           $item`gravy boat`,
-          $item`old patched suit-pants`,
+          $item`tearaway pants`,
           $item`unbreakable umbrella`
         ),
         modifier: "-combat, ML",
-        modes: { umbrella: "cocoon" },
+        modes: { umbrella: "forward-facing" },
       };
     },
     choices: { 523: 4 },
