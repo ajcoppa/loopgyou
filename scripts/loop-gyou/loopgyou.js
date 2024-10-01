@@ -18544,7 +18544,7 @@ var Alcove = [{
 var Cranny = [{
   name: "Cranny",
   after: ["Start"],
-  ready: () => (0,external_kolmafia_namespaceObject.myBasestat)($stat(level7_templateObject11 || (level7_templateObject11 = level7_taggedTemplateLiteral(["Muscle"])))) >= 62,
+  ready: () => (0,external_kolmafia_namespaceObject.myBasestat)($stat(level7_templateObject11 || (level7_templateObject11 = level7_taggedTemplateLiteral(["Muscle"])))) >= 62 && (0,external_kolmafia_namespaceObject.myTurncount)() > 200,
   completed: () => property_get("cyrptCrannyEvilness") <= 13,
   prepare: () => {
     tuneCape();
@@ -18560,10 +18560,10 @@ var Cranny = [{
   do: template_string_$location(level7_templateObject12 || (level7_templateObject12 = level7_taggedTemplateLiteral(["The Defiled Cranny"]))),
   outfit: () => {
     return {
-      equip: tryCape(template_string_$item(level7_templateObject13 || (level7_templateObject13 = level7_taggedTemplateLiteral(["antique machete"]))), template_string_$item(level7_templateObject14 || (level7_templateObject14 = level7_taggedTemplateLiteral(["gravy boat"]))), template_string_$item(level7_templateObject15 || (level7_templateObject15 = level7_taggedTemplateLiteral(["old patched suit-pants"]))), template_string_$item(level7_templateObject16 || (level7_templateObject16 = level7_taggedTemplateLiteral(["unbreakable umbrella"])))),
+      equip: tryCape(template_string_$item(level7_templateObject13 || (level7_templateObject13 = level7_taggedTemplateLiteral(["antique machete"]))), template_string_$item(level7_templateObject14 || (level7_templateObject14 = level7_taggedTemplateLiteral(["gravy boat"]))), template_string_$item(level7_templateObject15 || (level7_templateObject15 = level7_taggedTemplateLiteral(["tearaway pants"]))), template_string_$item(level7_templateObject16 || (level7_templateObject16 = level7_taggedTemplateLiteral(["unbreakable umbrella"])))),
       modifier: "-combat, ML",
       modes: {
-        umbrella: "cocoon"
+        umbrella: "forward-facing"
       }
     };
   },
@@ -21920,7 +21920,7 @@ function checkRequirements() {
   }
 }
 ;// CONCATENATED MODULE: ./src/_git_commit.ts
-var lastCommitHash = "4d0dd8c";
+var lastCommitHash = "bc5ed79";
 ;// CONCATENATED MODULE: ./src/main.ts
 var main_templateObject, main_templateObject2, main_templateObject3;
 
