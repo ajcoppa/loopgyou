@@ -15,6 +15,18 @@ void main(int choice, string page)
     run_choice(2);
   else if (choice == 691 && options contains 4)  // Second Chest
     run_choice(4);
+
+  else if (choice == 182) {
+    if (options contains 6)
+      run_choice(6);
+    else if (options contains 4)
+      run_choice(4);
+    else if (options contains 5)
+      run_choice(5);
+    else
+      run_choice(1);
+  }
+
   //Everfull dart handling
   else switch (choice) {
 		default:
