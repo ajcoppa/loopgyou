@@ -18850,7 +18850,7 @@ var McLargeHugeQuest = {
       };
     },
     limit: {
-      tries: 1
+      soft: 30
     },
     freeaction: true
   }, {
@@ -21976,7 +21976,7 @@ function checkRequirements() {
   }
 }
 ;// CONCATENATED MODULE: ./src/_git_commit.ts
-var lastCommitHash = "327baf9";
+var lastCommitHash = "089dae5";
 ;// CONCATENATED MODULE: ./src/main.ts
 var main_templateObject, main_templateObject2, main_templateObject3;
 
