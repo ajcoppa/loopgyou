@@ -18851,8 +18851,7 @@ var McLargeHugeQuest = {
     },
     limit: {
       soft: 30
-    },
-    freeaction: true
+    }
   }, {
     name: "Climb",
     after: ["Trapper Return", "Extreme Snowboard"],
@@ -21976,7 +21975,7 @@ function checkRequirements() {
   }
 }
 ;// CONCATENATED MODULE: ./src/_git_commit.ts
-var lastCommitHash = "089dae5";
+var lastCommitHash = "2a35af1";
 ;// CONCATENATED MODULE: ./src/main.ts
 var main_templateObject, main_templateObject2, main_templateObject3;
 
