@@ -1,4 +1,4 @@
-import { equippedAmount, itemAmount, numericModifier, visitUrl } from "kolmafia";
+import { equippedAmount, Item, itemAmount, numericModifier, visitUrl } from "kolmafia";
 import {
   $effect,
   $item,
@@ -86,9 +86,9 @@ export const McLargeHugeQuest: Quest = {
       // islint-disable-next-line libram/verify-constants
       completed: () =>
         haveHugeLarge() ||
-        (have(item`eXtreme mittens`) &&
-          have(item`snowboarder pants`) &&
-          have(item`eXtreme scarf`)) ||
+        (have($item`eXtreme mittens`) &&
+          have($item`snowboarder pants`) &&
+          have($item`eXtreme scarf`)) ||
         step("questL08Trapper") >= 3,
       do: $location`The eXtreme Slope`,
       // eslint-disable-next-line libram/verify-constants
