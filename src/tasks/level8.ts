@@ -123,7 +123,7 @@ export const McLargeHugeQuest: Quest = {
           modifier: "-combat",
         };
       },
-      limit: { tries: 1 },
+      limit: { soft: 30 },
       freeaction: true,
     },
     {
