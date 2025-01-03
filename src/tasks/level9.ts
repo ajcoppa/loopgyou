@@ -402,6 +402,21 @@ export const ChasmQuest: Quest = {
       limit: { tries: 30, unready: true },
     },
     {
+      name: "Fly Across Bridge",
+      after: ["Start"],
+      priority: () => Priorities.Free,
+      ready: () => have($item`bat wings`) && get("chasmBridgeProgress") >= 25,
+      completed: () => step("questL09Topping") >= 1,
+      freeaction: true,
+      do: () => {
+        visitUrl("place.php?whichplace=orc_chasm&action=bridge_jump", false);
+        // Talking to highlands lord advances the mafia quest state
+        visitUrl("place.php?whichplace=highlands&action=highlands_dude", false);
+      },
+      outfit: { back: $item`bat wings` },
+      limit: { tries: 1 },
+    },
+    {
       name: "Start Peaks",
       after: ["Bridge", "Bridge Parts"],
       completed: () => step("questL09Topping") >= 2,

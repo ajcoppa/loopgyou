@@ -331,12 +331,16 @@ export const wandererSources: WandererSource[] = [
     name: "Kramco",
     available: () => have($item`Kramco Sausage-o-Matic™`) && atLevel(5),
     equip: [
-      { equip: $items`Kramco Sausage-o-Matic™, Space Trip safety headphones` },
+      {
+        equip: $items`Kramco Sausage-o-Matic™, Space Trip safety headphones`,
+        avoid: $items`bat wings`,
+      },
       {
         equip: $items`Kramco Sausage-o-Matic™, unwrapped knock-off retro superhero cape`,
         modes: { retrocape: ["heck", "hold"] },
+        avoid: $items`bat wings`,
       },
-      { equip: $items`Kramco Sausage-o-Matic™` },
+      { equip: $items`Kramco Sausage-o-Matic™`, avoid: $items`bat wings` },
     ],
     prepare: () => {
       if (SourceTerminal.have() && SourceTerminal.getDigitizeUses() === 0) {

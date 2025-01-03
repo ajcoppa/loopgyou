@@ -48,7 +48,7 @@ export const GiantQuest: Quest = {
       do: $location`The Beanbat Chamber`,
       outfit: {
         modifier: "item",
-        equip: $items`miniature crystal ball`,
+        equip: $items`miniature crystal ball, bat wings`,
         avoid: $items`broken champagne bottle`,
       },
       combat: new CombatStrategy()
@@ -104,7 +104,13 @@ export const GiantQuest: Quest = {
       choices: {
         178: 2,
         182: () =>
-          have($item`model airship`) ? 1 : equippedAmount($item`candy cane sword cane`) > 0 ? 5 : 4,
+          equippedAmount($item`bat wings`) > 0
+            ? 6
+            : !have($item`model airship`)
+              ? 4
+              : equippedAmount($item`candy cane sword cane`) > 0
+                ? 5
+                : 1,
       },
       post: () => {
         if (have($effect`Temporary Amnesia`)) cliExecute("uneffect Temporary Amnesia");
@@ -112,7 +118,7 @@ export const GiantQuest: Quest = {
       outfit: () => {
         const equips = [];
         if (!have($item`metallic A`)) equips.push($item`candy cane sword cane`);
-        return { equip: equips, modifier: "-combat" };
+        return { equip: equips, modifier: "-combat", back: $item`bat wings` };
       },
       limit: { soft: 50 },
       delay: () =>

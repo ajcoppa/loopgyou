@@ -58,9 +58,9 @@ export const BatQuest: Quest = {
           !get("fireExtinguisherBatHoleUsed")
         )
           return stenchPlanner.outfitFor(1, {
-            equip: $items`industrial fire extinguisher`,
+            equip: $items`industrial fire extinguisher, bat wings`,
           });
-        else return stenchPlanner.outfitFor(1, { modifier: "item" });
+        else return stenchPlanner.outfitFor(1, { modifier: "item", equip: $items`bat wings` });
       },
       combat: new CombatStrategy()
         .macro(new Macro().trySkill($skill`Fire Extinguisher: Zone Specific`))
@@ -82,8 +82,8 @@ export const BatQuest: Quest = {
       completed: () => step("questL04Bat") + itemAmount($item`sonar-in-a-biscuit`) >= 2,
       priority: () =>
         step("questL11Shen") === 999 ||
-        have($item`The Stankara Stone`) ||
-        (myDaycount() === 1 && step("questL11Shen") > 1)
+          have($item`The Stankara Stone`) ||
+          (myDaycount() === 1 && step("questL11Shen") > 1)
           ? Priorities.None
           : Priorities.BadMood,
       prepare: () => {
@@ -95,7 +95,7 @@ export const BatQuest: Quest = {
       post: () => {
         if (have($item`sonar-in-a-biscuit`)) use($item`sonar-in-a-biscuit`);
       },
-      outfit: { modifier: "item, 10 stench res" },
+      outfit: { modifier: "item, 10 stench res", equip: $items`bat wings` },
       combat: new CombatStrategy().kill($monster`screambat`).killItem(),
       limit: { tries: 10 },
     },
@@ -120,7 +120,7 @@ export const BatQuest: Quest = {
       post: () => {
         if (have($item`sonar-in-a-biscuit`)) use($item`sonar-in-a-biscuit`);
       },
-      outfit: { modifier: "item, 10 stench res" },
+      outfit: { modifier: "item, 10 stench res", equip: $items`bat wings` },
       combat: new CombatStrategy().kill($monster`screambat`).killItem(),
       limit: { tries: 10 },
     },

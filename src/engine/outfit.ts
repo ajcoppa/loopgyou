@@ -233,6 +233,7 @@ export function equipDefaults(
       outfit.equip($item`fresh coat of paint`);
     }
     outfit.equip($item`familiar scrapbook`);
+    outfit.equip($item`bat wings`);
     outfit.equip($item`protonic accelerator pack`);
     outfit.equip($item`unwrapped knock-off retro superhero cape`);
     outfit.equip($item`designer sweatpants`);
