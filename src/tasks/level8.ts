@@ -124,7 +124,6 @@ export const McLargeHugeQuest: Quest = {
         };
       },
       limit: { soft: 30 },
-      freeaction: true,
     },
     {
       name: "Climb",
