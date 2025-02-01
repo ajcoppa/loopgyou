@@ -1,5 +1,5 @@
 import { step } from "grimoire-kolmafia";
-import { myBasestat, myFamiliar, Phylum, print, visitUrl } from "kolmafia";
+import { Item, myBasestat, myFamiliar, Phylum, print, visitUrl } from "kolmafia";
 import { $familiar, $item, $stat, have, Snapper } from "libram";
 
 export function debug(message: string, color?: string): void {
