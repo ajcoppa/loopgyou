@@ -557,7 +557,10 @@ export const MiscQuest: Quest = {
       name: "Grey Down Vest",
       after: [],
       completed: () =>
-        have($item`grey down vest`) || !have($skill`Summon Clip Art`) || get("tomeSummons") >= 3,
+        have($item`grey down vest`) ||
+        have($item`toy Cupid bow`) ||
+        !have($skill`Summon Clip Art`) ||
+        get("tomeSummons") >= 3,
       priority: () => Priorities.Free,
       do: () => {
         retrieveItem($item`box of Familiar Jacks`);

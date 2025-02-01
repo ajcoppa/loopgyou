@@ -75,3 +75,7 @@ export function haveFlorest(): boolean {
   }
   return cachedHaveFlorest;
 }
+
+export function bestGooseFamEquip(): Item {
+  return have($item`toy Cupid bow`) ? $item`toy Cupid bow` : $item`grey down vest`;
+}

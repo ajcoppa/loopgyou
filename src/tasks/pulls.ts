@@ -132,7 +132,7 @@ export const pulls: PullSpec[] = [
   { pull: $item`yule hatchet` },
   {
     pull: $item`grey down vest`,
-    useful: () => !have($skill`Summon Clip Art`) || get("tomeSummons") >= 3,
+    useful: () => (!have($skill`Summon Clip Art`) || get("tomeSummons") >= 3) && !have($item`toy Cupid bow`),
   },
   { pull: $item`teacher's pen`, duplicate: true },
   { pull: $item`blackberry galoshes`, useful: () => step("questL11Black") < 2 },

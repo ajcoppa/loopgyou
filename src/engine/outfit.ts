@@ -35,7 +35,7 @@ import { Resource, tryPlayApriling } from "./resources";
 import { Keys, keyStrategy } from "../tasks/keys";
 import { towerSkip } from "../tasks/level13";
 import { Modes, Outfit, OutfitSpec, step } from "grimoire-kolmafia";
-import { atLevel, haveLoathingLegion } from "../lib";
+import { atLevel, bestGooseFamEquip, haveLoathingLegion } from "../lib";
 import { args } from "../args";
 
 export function canEquipResource(outfit: Outfit, resource: Resource): boolean {
@@ -189,8 +189,10 @@ export function equipDefaults(
   if (
     outfit.familiar === $familiar`Grey Goose` &&
     (familiarWeight($familiar`Grey Goose`) < 6 || force_charge_goose)
-  )
-    outfit.equip($item`grey down vest`);
+  ) {
+    outfit.equip(bestGooseFamEquip());
+  }
+
   if (outfit.familiar === $familiar`Melodramedary` && get("camelSpit") < 100)
     outfit.equip($item`dromedary drinking helmet`);
 

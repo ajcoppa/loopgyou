@@ -76,7 +76,7 @@ import {
   fixFoldables,
 } from "./outfit";
 import { cliExecute, equippedAmount, itemAmount, runChoice } from "kolmafia";
-import { atLevel, debug } from "../lib";
+import { atLevel, bestGooseFamEquip, debug } from "../lib";
 import {
   canChargeVoid,
   CombatResource,
@@ -543,7 +543,7 @@ export class Engine extends BaseEngine<CombatActions, ActiveTask> {
 
     // Prefer to charge the goose if we need it for an absorb
     if (outfit.familiar === $familiar`Grey Goose` && familiarWeight($familiar`Grey Goose`) < 6)
-      outfit.equip($item`grey down vest`);
+      outfit.equip(bestGooseFamEquip());
 
     // Determine if it is useful to target monsters with an orb (with no predictions).
     // 1. If task.orbtargets is undefined, then use an orb if there are absorb targets.
