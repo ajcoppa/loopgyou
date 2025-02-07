@@ -16,7 +16,7 @@ Most people run this script through [goorbo](https://github.com/frazazel/goorbo)
 To install the script, use the following command in the KoLMafia CLI.
 
 ```
-git checkout https://github.com/libraryaddict/loopgyou release
+git checkout https://github.com/ajcoppa/loopgyou release
 ```
 
 ### Usage
